@@ -1,0 +1,453 @@
+{
+  "pokemon": [
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Folhagem", "tipo": "Grama", "dano": 1, "efeito": ""},
+        { "nome": "Bicada", "tipo": "Voador", "dano": 1, "efeito": ""},
+        { "nome": "Rosnado", "tipo": "Normal", "dano": 0, "efeito": "enemy atk 0.5x"},
+        { "nome": "Investida", "tipo": "Normal", "dano": 1, "efeito": ""}
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Chimchar",
+      "tipo1": "Fogo",
+      "tipo2": null,
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Brasa", "tipo": "Fogo", "dano": 1, "efeito": "" },
+        { "nome": "Arranhão", "tipo": "Normal", "dano": 1, "efeito": "" },
+        { "nome": "Encarada", "tipo": "Normal", "dano": 0, "efeito": "enemy def 0.5x" },
+        { "nome": "Roda de fogo", "tipo": "Fogo", "dano": 2, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Totodile",
+      "tipo1": "Água",
+      "tipo2": null,
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Pistola d'água", "tipo": "Água", "dano": 1, "efeito": "" },
+        { "nome": "Arranhão", "tipo": "Normal", "dano": 1, "efeito": "" },
+        { "nome": "Encarada", "tipo": "Normal", "dano": 0, "efeito": "enemy def 0.5x" },
+        { "nome": "Mordida", "tipo": "Sombrio", "dano": 1, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Scyther",
+      "tipo1": "Inseto",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Corte enfurecido", "tipo": "Inseto", "dano": 1, "efeito": "" },
+        { "nome": "Ataque de asa", "tipo": "Voador", "dano": 1, "efeito": "" },
+        { "nome": "Ataque rápido", "tipo": "Normal", "dano": 1, "efeito": "" },
+        { "nome": "Encarada", "tipo": "Normal", "dano": 0, "efeito": "enemy def 0.5x" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Probopass",
+      "tipo1": "Pedra",
+      "tipo2": "Aço",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Investida", "tipo": "Normal", "dano": 1, "efeito": "" },
+        { "nome": "Faísca", "tipo": "Elétrico", "dano": 1, "efeito": "" },
+        { "nome": "Deslizamento de pedras", "tipo": "Pedra", "dano": 1, "efeito": "" },
+        { "nome": "Defesa de ferro", "tipo": "Aço", "dano": 0, "efeito": "self def 2x" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Horsea",
+      "tipo1": "Água",
+      "tipo2": null,
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Pistola d'água", "tipo": "Água", "dano": 1, "efeito": "" },
+        { "nome": "Encarada", "tipo": "Normal", "dano": 0, "efeito": "enemy def 0.5x" },
+        { "nome": "Bafo do dragão", "tipo": "Dragão", "dano": 1, "efeito": "" },
+        { "nome": "Dança do dragão", "tipo": "Dragão", "dano": 0, "efeito": "self atk 2x" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rowlet",
+      "tipo1": "Grama",
+      "tipo2": "Voador",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
+        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+      ],
+      "efeitos": null,
+      "ascii": ""
+    }
+    ]
+}
