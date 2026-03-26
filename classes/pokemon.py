@@ -1,4 +1,4 @@
-from moves import Moves
+from classes.moves import Moves
 from assets.typechart import get_multiplicador
 
 class Pokemon:

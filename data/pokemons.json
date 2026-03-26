@@ -1,0 +1,509 @@
+{
+  "pokemon": [
+    {
+      "nome": "Rowlet",
+      "tipo1": "grama",
+      "tipo2": "voador",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Folhagem", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Bicada", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Rosnado", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Investida", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Chimchar",
+      "tipo1": "fogo",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Brasa", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Arranhão", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Encarada", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Roda de fogo", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Totodile",
+      "tipo1": "agua",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Pistola d'água", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Arranhão", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Encarada", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Mordida", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Scyther",
+      "tipo1": "inseto",
+      "tipo2": "voador",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Corte enfurecido", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Ataque de asa", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Ataque rápido", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Encarada", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Probopass",
+      "tipo1": "pedra",
+      "tipo2": "aço",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Investida", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Faísca", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Deslizamento de pedras", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Defesa de ferro", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Kingler",
+      "tipo1": "agua",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Braço de martelo", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Dança das espadas", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Martelo caranguejo", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Garra metálica", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+    {
+      "nome": "Mawile",
+      "tipo1": "aço",
+      "tipo2": "fada",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Cabeçada de ferro", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Mordida", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Lágrimas falsas", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Beijo drenante", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Cubchoo",
+      "tipo1": "gelo",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Nevasca", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Vento congelante", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Rosnado", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Tiro de lama", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Koffing",
+      "tipo1": "veneno",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+       { "nome": "Lama venenosa", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Emboscada", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Investida", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Memento", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Camerupt",
+      "tipo1": "fogo",
+      "tipo2": "terra",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Erupção", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Terremoto", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Focar energia", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Investida", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+    {
+      "nome": "Horsea",
+      "tipo1": "agua",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Pistola d'água", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Encarada", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Bafo do dragão", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Dança do dragão", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Graveler",
+      "tipo1": "pedra",
+      "tipo2": "terra",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+       { "nome": "Terremoto", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Gume de pedra", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Enrolar-se", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Arremessar pedra", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Chandelure",
+      "tipo1": "fantasma",
+      "tipo2": "fogo",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+       { "nome": "Esfera das sombras", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Superaquecimento", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Chicotear", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Mente calma", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Unfezant",
+      "tipo1": "normal",
+      "tipo2": "voador",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+       { "nome": "Rosnado", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Ataque aéreo", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Investida", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Cortador aéreo", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Gardevoir",
+      "tipo1": "psiquico",
+      "tipo2": "fada",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Beijo drenante", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Brilho deslumbrante", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Raio psíquico", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Mente calma", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Magmortar",
+      "tipo1": "fogo",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+       { "nome": "Encarada", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Lança-chamas", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Soco flamejante", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Rajada focada", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Sandygast",
+      "tipo1": "fantasma",
+      "tipo2": "terra",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+       { "nome": "Tumba de areia", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Esfera das sombras", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Ataque de areia", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Defesa de ferro", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Abomasnow",
+      "tipo1": "grama",
+      "tipo2": "gelo",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Martelo de madeira", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Nevasca", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Encarada", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Soco congelante", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Toucannon",
+      "tipo1": "normal",
+      "tipo2": "voador",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Hipervoz", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Bico perfurante", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Ataque furioso", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Guincho", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Sableye",
+      "tipo1": "sombrio",
+      "tipo2": "fantasma",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Esfera das sombras", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Jogo sujo", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Cabeçada zen", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Mente calma", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Scolipede",
+      "tipo1": "inseto",
+      "tipo2": "veneno",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+       { "nome": "Míssil de alfinete", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Golpe venenoso", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Cauda de ferro", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Guincho", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+    {
+      "nome": "Tentacruel",
+      "tipo1": "agua",
+      "tipo2": "veneno",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Bomba hidráulica", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Onda de lodo", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Armadura ácida", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Pulso d'água", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Heliolisk",
+      "tipo1": "eletrico",
+      "tipo2": "normal",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Raio do trovão", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Golpe devastador", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Hiper raio", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Trovão", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Typhlosion",
+      "tipo1": "fogo",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+       { "nome": "Erupção", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Superaquecimento", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Encarada", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Ataque rápido", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Rayquaza",
+      "tipo1": "dragao",
+      "tipo2": "voador",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "scensão do dragão", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Hiper raio", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Pulso do dragão", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Dança do dragão", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Victini",
+      "tipo1": "psiquico",
+      "tipo2": "fogo",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "V-criar", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Cabeçada zen", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Exercitar-se", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Ataque rápido", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Lucario",
+      "tipo1": "lutador",
+      "tipo2": "aço",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Esfera de aura", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Corpo-a-corpo", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Garra de metal", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Exercitar-se", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+     {
+      "nome": "Groudon",
+      "tipo1": "terra",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Laminas do precipício", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Terremoto", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Cabeçada de ferro", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Investida ardente", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+
+    {
+      "nome": "Lugia",
+      "tipo1": "psiquico",
+      "tipo2": "voador",
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Investida do dragão", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Ataque aéreo", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Psiquico", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Mente calma", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    },
+    {
+      "nome": "Tornadus",
+      "tipo1": "voador",
+      "tipo2": null,
+      "hp": 0,
+      "hpmax": 0,
+      "movimentos": [
+        { "nome": "Tempestade de vento", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Encarada", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "Mordida", "tipo": "grama", "dano": 1, "efeito": null},
+        { "nome": "furacão", "tipo": "grama", "dano": 1, "efeito": null}
+      ],
+      "atkmulti": 1,
+      "defmulti": 1,
+      "ascii": ""
+    }
+    ]
+}

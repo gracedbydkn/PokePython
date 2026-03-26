@@ -1,6 +1,6 @@
 class Moves:
-    def __init__(self, nome: str, tipo: str, dano: int, efeito: str | None = None):
+    def __init__(self, nome: str, tipo: str, dano: int, efeito: dict | None = None):
         self.nome = nome
-        self. tipo = tipo
+        self.tipo = tipo
         self.dano = dano
         self.efeito = efeito
