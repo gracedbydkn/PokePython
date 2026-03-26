@@ -6,12 +6,11 @@
       "tipo2": "Voador",
       "hp": "?",
       "movimentos": [
-        { "nome": "Folhagem", "tipo": "Grama", "dano": 1, "efeito": ""},
-        { "nome": "Bicada", "tipo": "Voador", "dano": 1, "efeito": ""},
-        { "nome": "Rosnado", "tipo": "Normal", "dano": 0, "efeito": "enemy atk 0.5x"},
-        { "nome": "Investida", "tipo": "Normal", "dano": 1, "efeito": ""}
+        { "nome": "Folhagem"},
+        { "nome": "Bicada"},
+        { "nome": "Rosnado"},
+        { "nome": "Investida"}
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
@@ -21,12 +20,11 @@
       "tipo2": null,
       "hp": "?",
       "movimentos": [
-        { "nome": "Brasa", "tipo": "Fogo", "dano": 1, "efeito": "" },
-        { "nome": "Arranhão", "tipo": "Normal", "dano": 1, "efeito": "" },
-        { "nome": "Encarada", "tipo": "Normal", "dano": 0, "efeito": "enemy def 0.5x" },
-        { "nome": "Roda de fogo", "tipo": "Fogo", "dano": 2, "efeito": "" }
+        { "nome": "Brasa" },
+        { "nome": "Arranhão" },
+        { "nome": "Encarada" },
+        { "nome": "Roda de fogo"}
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
@@ -36,12 +34,11 @@
       "tipo2": null,
       "hp": "?",
       "movimentos": [
-        { "nome": "Pistola d'água", "tipo": "Água", "dano": 1, "efeito": "" },
-        { "nome": "Arranhão", "tipo": "Normal", "dano": 1, "efeito": "" },
-        { "nome": "Encarada", "tipo": "Normal", "dano": 0, "efeito": "enemy def 0.5x" },
-        { "nome": "Mordida", "tipo": "Sombrio", "dano": 1, "efeito": "" }
+        { "nome": "Pistola d'água"},
+        { "nome": "Arranhão" },
+        { "nome": "Encarada" },
+        { "nome": "Mordida" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
@@ -51,12 +48,11 @@
       "tipo2": "Voador",
       "hp": "?",
       "movimentos": [
-        { "nome": "Corte enfurecido", "tipo": "Inseto", "dano": 1, "efeito": "" },
-        { "nome": "Ataque de asa", "tipo": "Voador", "dano": 1, "efeito": "" },
-        { "nome": "Ataque rápido", "tipo": "Normal", "dano": 1, "efeito": "" },
-        { "nome": "Encarada", "tipo": "Normal", "dano": 0, "efeito": "enemy def 0.5x" }
+        { "nome": "Corte enfurecido"},
+        { "nome": "Ataque de asa" },
+        { "nome": "Ataque rápido" },
+        { "nome": "Encarada" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
@@ -66,387 +62,357 @@
       "tipo2": "Aço",
       "hp": "?",
       "movimentos": [
-        { "nome": "Investida", "tipo": "Normal", "dano": 1, "efeito": "" },
-        { "nome": "Faísca", "tipo": "Elétrico", "dano": 1, "efeito": "" },
-        { "nome": "Deslizamento de pedras", "tipo": "Pedra", "dano": 1, "efeito": "" },
-        { "nome": "Defesa de ferro", "tipo": "Aço", "dano": 0, "efeito": "self def 2x" }
+        { "nome": "Investida" },
+        { "nome": "Faísca" },
+        { "nome": "Deslizamento de pedras" },
+        { "nome": "Defesa de ferro" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
+    {
+      "nome": "Kingler",
+      "tipo1": "Água",
+      "tipo2": null,
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Braço de martelo"},
+        { "nome": "Dança das espadas" },
+        { "nome": "Martelo caranguejo" },
+        { "nome": "Garra metálica" }
+      ],
+      "ascii": ""
+    },
+    {
+      "nome": "Mawile",
+      "tipo1": "Aço",
+      "tipo2": "Fada",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Cabeçada de ferro"},
+        { "nome": "Mordida" },
+        { "nome": "Lágrimas falsas" },
+        { "nome": "Beijo drenante" }
+      ],
+      "ascii": ""
+    },
+
+     {
+      "nome": "Cubchoo",
+      "tipo1": "Gelo",
+      "tipo2": null,
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Nevasca"},
+        { "nome": "Vento congelante" },
+        { "nome": "Rosnado" },
+        { "nome": "Tiro de lama" }
+      ],
+      "ascii": ""
+    },
+
+    {
+      "nome": "Koffing",
+      "tipo1": "Tóxico",
+      "tipo2": null,
+      "hp": "?",
+      "movimentos": [
+       { "nome": "Lama venenosa"},
+        { "nome": "Emboscada" },
+        { "nome": "Investida" },
+        { "nome": "Memento" }
+      ],
+      "ascii": ""
+    },
+
+    {
+      "nome": "Camerupt",
+      "tipo1": "Fogo",
+      "tipo2": "Terra",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Erupção"},
+        { "nome": "Terremoto" },
+        { "nome": "Focar energia" },
+        { "nome": "Investida" }
+      ],
+      "ascii": ""
+    },
     {
       "nome": "Horsea",
       "tipo1": "Água",
       "tipo2": null,
       "hp": "?",
       "movimentos": [
-        { "nome": "Pistola d'água", "tipo": "Água", "dano": 1, "efeito": "" },
-        { "nome": "Encarada", "tipo": "Normal", "dano": 0, "efeito": "enemy def 0.5x" },
-        { "nome": "Bafo do dragão", "tipo": "Dragão", "dano": 1, "efeito": "" },
-        { "nome": "Dança do dragão", "tipo": "Dragão", "dano": 0, "efeito": "self atk 2x" }
+        { "nome": "Pistola d'água"},
+        { "nome": "Encarada" },
+        { "nome": "Bafo do dragão" },
+        { "nome": "Dança do dragão" }
       ],
-      "efeitos": null,
-      "ascii": ""
-    },
-
-    {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
-      "hp": "?",
-      "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
-      ],
-      "efeitos": null,
-      "ascii": ""
-    },
-
-    {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
-      "hp": "?",
-      "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
-      ],
-      "efeitos": null,
       "ascii": ""
     },
 
      {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Graveler",
+      "tipo1": "Pedra",
+      "tipo2": "Terra",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+       { "nome": "Terremoto"},
+        { "nome": "Gume de pedra" },
+        { "nome": "Enrolar-se" },
+        { "nome": "Arremessar pedra" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Chandelure",
+      "tipo1": "Fantasma",
+      "tipo2": "Fogo",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+       { "nome": "Esfera das sombras"},
+        { "nome": "Superaquecimento" },
+        { "nome": "Chicotear" },
+        { "nome": "Mente calma" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
+      "nome": "Unfezant",
+      "tipo1": "Normal",
       "tipo2": "Voador",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+       { "nome": "Rosnado"},
+        { "nome": "Ataque aéreo" },
+        { "nome": "Investida" },
+        { "nome": "Cortador aéreo" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Gardevoir",
+      "tipo1": "Psíquico",
+      "tipo2": "Fada",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+       { "nome": "Beijo drenante"},
+        { "nome": "Brilho deslumbrante" },
+        { "nome": "Raio psíquico" },
+        { "nome": "Mente calma" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
      {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Magmortar",
+      "tipo1": "Fogo",
+      "tipo2": null,
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+       { "nome": "Encarada"},
+        { "nome": "Lança-chamas" },
+        { "nome": "Soco flamejante" },
+        { "nome": "Rajada focada" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Sandygast",
+      "tipo1": "Fantasma",
+      "tipo2": "Terra",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+       { "nome": "Tumba de areia"},
+        { "nome": "Esfera das sombras" },
+        { "nome": "Ataque de areia" },
+        { "nome": "Defesa de ferro" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
+      "nome": "Abomasnow",
       "tipo1": "Grama",
-      "tipo2": "Voador",
+      "tipo2": "Gelo",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "Martelo de madeira"},
+        { "nome": "Nevasca" },
+        { "nome": "Encarada" },
+        { "nome": "Soco congelante" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
+      "nome": "Toucannon",
+      "tipo1": "Normal",
       "tipo2": "Voador",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "Hipervoz"},
+        { "nome": "Bico perfurante" },
+        { "nome": "Ataque furioso" },
+        { "nome": "Guincho" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
      {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Sableye",
+      "tipo1": "Sombrio",
+      "tipo2": "Fantasma",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "Esfera das sombras"},
+        { "nome": "Jogo sujo" },
+        { "nome": "Cabeçada zen" },
+        { "nome": "Mente calma" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Scolipede",
+      "tipo1": "Inseto",
+      "tipo2": "Venenoso",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+       { "nome": "Míssil de alfinete"},
+        { "nome": "Golpe venenoso" },
+        { "nome": "Cauda de ferro" },
+        { "nome": "Guincho" }
       ],
-      "efeitos": null,
+      "ascii": ""
+    },
+    {
+      "nome": "Tentacruel",
+      "tipo1": "Água",
+      "tipo2": "Venenoso",
+      "hp": "?",
+      "movimentos": [
+        { "nome": "Bomba hidráulica"},
+        { "nome": "Onda de lodo" },
+        { "nome": "Armadura ácida" },
+        { "nome": "Pulso d'água" }
+      ],
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Heliolisk",
+      "tipo1": "Elétrico",
+      "tipo2": "Normal",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "Raio do trovão"},
+        { "nome": "Golpe devastador" },
+        { "nome": "Hiper raio" },
+        { "nome": "Trovão" }
       ],
-      "efeitos": null,
-      "ascii": ""
-    },
-
-    {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
-      "hp": "?",
-      "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
-      ],
-      "efeitos": null,
       "ascii": ""
     },
 
      {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Typhlosion",
+      "tipo1": "Fogo",
+      "tipo2": null,
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+       { "nome": "Erupção"},
+        { "nome": "Superaquecimento" },
+        { "nome": "Encarada" },
+        { "nome": "Ataque rápido" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
+      "nome": "Rayquaza",
+      "tipo1": "Dragão",
       "tipo2": "Voador",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "scensão do dragão"},
+        { "nome": "Hiper raio" },
+        { "nome": "Pulso do dragão" },
+        { "nome": "Dança do dragão" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Victini",
+      "tipo1": "Psíquico",
+      "tipo2": "Fogo",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "V-criar"},
+        { "nome": "Cabeçada zen" },
+        { "nome": "Exercitar-se" },
+        { "nome": "Ataque rápido" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Lucario",
+      "tipo1": "Lutador",
+      "tipo2": "Aço",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "Esfera de aura"},
+        { "nome": "Corpo-a-corpo" },
+        { "nome": "Garra de metal" },
+        { "nome": "Exercitar-se" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
      {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Groudon",
+      "tipo1": "Terra",
+      "tipo2": null,
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "Laminas do precipício"},
+        { "nome": "Terremoto" },
+        { "nome": "Cabeçada de ferro" },
+        { "nome": "Investida ardente" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
 
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
+      "nome": "Lugia",
+      "tipo1": "Psíquico",
       "tipo2": "Voador",
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "Investida do dragão"},
+        { "nome": "Ataque aéreo" },
+        { "nome": "Psiquico" },
+        { "nome": "Mente calma" }
       ],
-      "efeitos": null,
       "ascii": ""
     },
-
     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
+      "nome": "Tornadus",
+      "tipo1": "Voador",
+      "tipo2": null,
       "hp": "?",
       "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
+        { "nome": "Tempestade de vento"},
+        { "nome": "Encarada" },
+        { "nome": "Mordida" },
+        { "nome": "furacão" }
       ],
-      "efeitos": null,
-      "ascii": ""
-    },
-
-    {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
-      "hp": "?",
-      "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
-      ],
-      "efeitos": null,
-      "ascii": ""
-    },
-
-     {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
-      "hp": "?",
-      "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
-      ],
-      "efeitos": null,
-      "ascii": ""
-    },
-
-    {
-      "nome": "Rowlet",
-      "tipo1": "Grama",
-      "tipo2": "Voador",
-      "hp": "?",
-      "movimentos": [
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" },
-        { "nome": "soltar teia", "tipo": "", "dano": 0, "efeito": "" }
-      ],
-      "efeitos": null,
       "ascii": ""
     }
     ]

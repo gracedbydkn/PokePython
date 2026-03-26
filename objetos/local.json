@@ -1,0 +1,204 @@
+{
+   "locais":[
+    {
+        "nome": "Floresta Escura",
+        "pokemon": " Scyther",
+        "caminhos":[
+            { "nome":"Montanha" },
+            { "nome": "Montanha Nevada" }
+        ]
+    },
+    {
+        "nome": "Caverna",
+        "pokemon": "Probopass",
+        "caminhos":[
+            { "nome":"Pântano" },
+            { "nome": "Montanha 2" }
+        ]
+
+    },
+    {
+        "nome": "Praia",
+        "pokemon": "Kingler",
+        "caminhos":[
+            { "nome":"Oceano" },
+            { "nome": "Deserto" }
+        ]
+    },
+    {
+        "nome": "Montanha",
+        "pokemon": "Mawile",
+        "caminhos":[
+            { "nome":"Pico da montanha" }
+        ]
+    },
+    {
+        "nome": "Montanha Nevada",
+        "pokemon": "Cubchoo",
+        "caminhos":[
+            { "nome":"Cemitério" }
+        ]
+    },
+    {
+        "nome": "Pântano",
+        "pokemon": "Koffing",
+        "caminhos":[
+            { "nome":"Pico da montanha" }
+        ]
+    },
+    {
+        "nome": "Montanha 2",
+        "pokemon": "Camerupt",
+        "caminhos":[
+            { "nome":"Floresta Nebulosa" }
+        ]
+    },
+    {
+        "nome": "Oceano",
+        "pokemon": "Horsea",
+        "caminhos":[
+            { "nome":"Floresta Nebulosa" }
+        ]
+    },
+    {
+        "nome": "Deserto",
+        "pokemon": "Graveler",
+        "caminhos":[
+            { "nome":"Vulcão" }
+        ]
+    },
+    {
+        "nome": "Cemitério",
+        "pokemon": "Chandelure",
+        "caminhos":[
+            { "nome":"Praia 2" },
+            { "nome":"Montanha nevada 2" }
+        ]
+    },
+    {
+        "nome": "Pico da montanha",
+        "pokemon": "Unfezant",
+        "caminhos":[
+            { "nome":"Cemitério 2" }
+            
+        ]
+    },
+    {
+        "nome": "Floresta Nebulosa",
+        "pokemon": "Gardevoir",
+        "caminhos":[
+            { "nome":"Montanha nevada 2" },
+            { "nome":"Floresta 2" }
+            
+            
+        ]
+    },
+    {
+        "nome": "Vulcão",
+        "pokemon": "Magmortar",
+        "caminhos":[
+            { "nome":"Cemitério 2" },
+            { "nome":"Pântano 2" }
+            
+            
+        ]
+    },
+    {
+        "nome": "Praia 2",
+        "pokemon": "Sandygast",
+        "caminhos":[
+            { "nome":"Oceano 2" },
+            { "nome":"Deserto 2" }
+            
+            
+        ]
+    },
+    {
+        "nome": "Montanha nevada 2",
+        "pokemon": "Abomasnow",
+        "caminhos":[
+            { "nome":"Vulcão 2" },
+            { "nome":"Pico da montanha 2" }
+            
+            
+        ]
+    },
+    {
+        "nome": "Floresta 2",
+        "pokemon": "Toucannon",
+        "caminhos":[
+            { "nome":"Pico da montanha 2" },
+            { "nome":"Caverna 2" }
+            
+            
+        ]
+    },
+    {
+        "nome": "Cemmitério 2",
+        "pokemon": " Sableye",
+        "caminhos":[
+            { "nome":"Floresta Nebulosa" }
+            
+        ]
+    },
+    {
+        "nome": "Pântano 2",
+        "pokemon": "Scolipede",
+        "caminhos":[
+            { "nome":"Floresta Nebulosa" },
+            { "nome":"Caverna 2" }
+            
+            
+            
+        ]
+    },
+    {
+        "nome": "Oceano 2",
+        "pokemon": "Tentacruel",
+        "caminhos":[
+            { "nome":"Big Boss" }
+            
+        ]
+    },
+    {
+        "nome": "Deserto 2",
+        "pokemon": "Heliolisk",
+        "caminhos":[
+            { "nome":"Big Boss" }
+            
+        ]
+    },
+    {
+        "nome": "Vulcão 2",
+        "pokemon": "Typhlosion",
+        "caminhos":[
+            { "nome":"Big Boss" }
+            
+        ]
+    },
+    {
+        "nome": "Pico da montanha 2",
+        "pokemon": "Rayquaza",
+        "caminhos":[
+            { "nome":"Big Boss" }
+            
+        ]
+    },
+    {
+        "nome": "Floresta Nebulosa",
+        "pokemon": "Victini",
+        "caminhos":[
+            { "nome":"Big Boss" }
+            
+        ]
+    },
+    {
+        "nome": "Caverna 2",
+        "pokemon": "Lucario",
+        "caminhos":[
+            { "nome":"Big Boss" }
+            
+        ]
+    }
+   ]
+}
