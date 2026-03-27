@@ -1,5 +1,5 @@
-from pokemon import Pokemon
-from local import Local
+from classes.pokemon import Pokemon
+from classes.local import Local
 
 class Jogador:
     def __init__(self, equipe: list[Pokemon], localAtual: Local):
@@ -12,8 +12,24 @@ class Jogador:
         self.localAtual = destino
         return True
 
-    def is_vivo(self) -> bool:
-        return any(p.is_vivo() for p in self.equipe)
+    def isVivo(self) -> bool:
+        return any(p.isVivo() for p in self.equipe)
 
     def pokemonAtual(self) -> Pokemon:
-        return next(p for p in self.equipe if p.is_vivo())
+        return next(p for p in self.equipe if p.isVivo())
+    
+    def trocarPokemon(self, novo: Pokemon) -> bool:
+        if novo not in self.equipe:
+            return False
+        if not novo.isVivo():
+            return False
+        if novo == self.pokemonAtual():
+            return False
+        self.equipe.remove(novo)
+        self.equipe.insert(0, novo)
+        return True
+
+    def recrutar(self, pokemon: Pokemon) -> bool:
+        pokemon.hp = pokemon.hpmax
+        self.equipe.append(pokemon)
+        return True

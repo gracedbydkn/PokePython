@@ -15,7 +15,6 @@
             { "nome":"Pântano" },
             { "nome": "Montanha 2" }
         ]
-
     },
     {
         "nome": "Praia",
@@ -77,10 +76,9 @@
     },
     {
         "nome": "Pico da montanha",
-        "pokemon": "Unfezant",
+        "pokemon": "Staraptor",
         "caminhos":[
-            { "nome":"Cemitério 2" }
-            
+            { "nome":"Cemitério 2" }  
         ]
     },
     {
@@ -88,9 +86,7 @@
         "pokemon": "Gardevoir",
         "caminhos":[
             { "nome":"Montanha nevada 2" },
-            { "nome":"Floresta 2" }
-            
-            
+            { "nome":"Floresta 2" }   
         ]
     },
     {
@@ -98,9 +94,7 @@
         "pokemon": "Magmortar",
         "caminhos":[
             { "nome":"Cemitério 2" },
-            { "nome":"Pântano 2" }
-            
-            
+            { "nome":"Pântano 2" } 
         ]
     },
     {
@@ -108,9 +102,7 @@
         "pokemon": "Sandygast",
         "caminhos":[
             { "nome":"Oceano 2" },
-            { "nome":"Deserto 2" }
-            
-            
+            { "nome":"Deserto 2" } 
         ]
     },
     {
@@ -118,9 +110,7 @@
         "pokemon": "Abomasnow",
         "caminhos":[
             { "nome":"Vulcão 2" },
-            { "nome":"Pico da montanha 2" }
-            
-            
+            { "nome":"Pico da montanha 2" }  
         ]
     },
     {
@@ -129,8 +119,6 @@
         "caminhos":[
             { "nome":"Pico da montanha 2" },
             { "nome":"Caverna 2" }
-            
-            
         ]
     },
     {
@@ -138,7 +126,6 @@
         "pokemon": " Sableye",
         "caminhos":[
             { "nome":"Floresta Nebulosa" }
-            
         ]
     },
     {
@@ -147,57 +134,58 @@
         "caminhos":[
             { "nome":"Floresta Nebulosa" },
             { "nome":"Caverna 2" }
-            
-            
-            
         ]
     },
     {
         "nome": "Oceano 2",
         "pokemon": "Tentacruel",
         "caminhos":[
-            { "nome":"Big Boss" }
-            
+            { "nome":"Templo Perdido" }
         ]
     },
     {
         "nome": "Deserto 2",
         "pokemon": "Heliolisk",
         "caminhos":[
-            { "nome":"Big Boss" }
-            
+            { "nome":"Templo Perdido" }
         ]
     },
     {
         "nome": "Vulcão 2",
         "pokemon": "Typhlosion",
         "caminhos":[
-            { "nome":"Big Boss" }
-            
+            { "nome":"Templo Perdido" } 
         ]
     },
     {
         "nome": "Pico da montanha 2",
         "pokemon": "Rayquaza",
         "caminhos":[
-            { "nome":"Big Boss" }
-            
+            { "nome":"Templo Perdido" } 
         ]
     },
     {
         "nome": "Floresta Nebulosa",
         "pokemon": "Victini",
         "caminhos":[
-            { "nome":"Big Boss" }
-            
+            { "nome":"Templo Perdido" } 
         ]
     },
     {
         "nome": "Caverna 2",
         "pokemon": "Lucario",
         "caminhos":[
-            { "nome":"Big Boss" }
-            
+            { "nome":"Templo Perdido" } 
+        ]
+    },
+    {
+        "nome": "Templo Perdido",
+        "pokemon": [
+            { "nome": "Lugia" },
+            { "nome": "Tornadus" },
+            { "nome": "Groudon" }
+        ],
+        "caminhos": [
         ]
     }
    ]
