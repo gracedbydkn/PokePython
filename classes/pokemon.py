@@ -15,6 +15,9 @@ class Pokemon:
 
     def atacar(self, movimento, alvo: "Pokemon") -> dict:
         efetividade = get_multiplicador(movimento.tipo, alvo.tipo1, alvo.tipo2)
+        if efetividade == 0:
+            return {"dano": 0, "multiplicador": 0, "logEfeito": None}
+
         dano = alvo.receberDano(int(movimento.dano * efetividade * self.atkmulti)) 
         logEfeito = self.aplicarEfeito(movimento, alvo)
 

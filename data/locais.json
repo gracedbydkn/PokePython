@@ -1,8 +1,17 @@
 {
    "locais":[
     {
-        "nome": "Floresta Escura",
-        "pokemon": " Scyther",
+        "nome": "Ovo",
+        "pokemon": null,
+        "caminhos":[
+            { "nome":"Floresta" },
+            { "nome": "Caverna" },
+            { "nome": "Praia" }
+        ]
+    },
+    {
+        "nome": "Floresta",
+        "pokemon": "Scyther",
         "caminhos":[
             { "nome":"Montanha" },
             { "nome": "Montanha Nevada" }
@@ -28,7 +37,7 @@
         "nome": "Montanha",
         "pokemon": "Mawile",
         "caminhos":[
-            { "nome":"Pico da montanha" }
+            { "nome":"Pico da Montanha" }
         ]
     },
     {
@@ -42,7 +51,7 @@
         "nome": "Pântano",
         "pokemon": "Koffing",
         "caminhos":[
-            { "nome":"Pico da montanha" }
+            { "nome":"Pico da Montanha" }
         ]
     },
     {
@@ -70,32 +79,64 @@
         "nome": "Cemitério",
         "pokemon": "Chandelure",
         "caminhos":[
-            { "nome":"Praia 2" },
-            { "nome":"Montanha nevada 2" }
+            { "nome":"Centro Pokémon 1" }
         ]
     },
     {
-        "nome": "Pico da montanha",
+        "nome": "Pico da Montanha",
         "pokemon": "Staraptor",
         "caminhos":[
-            { "nome":"Cemitério 2" }  
+            { "nome":"Centro Pokémon 2" }  
         ]
     },
     {
         "nome": "Floresta Nebulosa",
         "pokemon": "Gardevoir",
         "caminhos":[
-            { "nome":"Montanha nevada 2" },
-            { "nome":"Floresta 2" }   
+            { "nome":"Centro Pokémon 3" }
         ]
     },
     {
         "nome": "Vulcão",
         "pokemon": "Magmortar",
         "caminhos":[
+            { "nome":"Centro Pokémon 4" }
+        ]
+    },
+    {
+        "nome": "Centro Pokémon 1",
+        "pokemon": null,
+        "caminhos":[
+            { "nome":"Praia 2" },
+            { "nome":"Montanha Nevada 2" } 
+        ],
+        "isCura": true
+    },
+    {
+        "nome": "Centro Pokémon 2",
+        "pokemon": null,
+        "caminhos":[
+            { "nome":"Cemitério 2" }
+        ],
+        "isCura": true
+    },
+    {
+        "nome": "Centro Pokémon 3",
+        "pokemon": null,
+        "caminhos":[
+            { "nome":"Montanha Nevada 2" },
+            { "nome":"Floresta 2" } 
+        ],
+        "isCura": true
+    },
+    {
+        "nome": "Centro Pokémon 4",
+        "pokemon": null,
+        "caminhos":[
             { "nome":"Cemitério 2" },
             { "nome":"Pântano 2" } 
-        ]
+        ],
+        "isCura": true
     },
     {
         "nome": "Praia 2",
@@ -106,7 +147,7 @@
         ]
     },
     {
-        "nome": "Montanha nevada 2",
+        "nome": "Montanha Nevada 2",
         "pokemon": "Abomasnow",
         "caminhos":[
             { "nome":"Vulcão 2" },
@@ -122,17 +163,17 @@
         ]
     },
     {
-        "nome": "Cemmitério 2",
-        "pokemon": " Sableye",
+        "nome": "Cemitério 2",
+        "pokemon": "Sableye",
         "caminhos":[
-            { "nome":"Floresta Nebulosa" }
+            { "nome":"Floresta Nebulosa 2" }
         ]
     },
     {
         "nome": "Pântano 2",
         "pokemon": "Scolipede",
         "caminhos":[
-            { "nome":"Floresta Nebulosa" },
+            { "nome":"Floresta Nebulosa 2" },
             { "nome":"Caverna 2" }
         ]
     },
@@ -165,7 +206,7 @@
         ]
     },
     {
-        "nome": "Floresta Nebulosa",
+        "nome": "Floresta Nebulosa 2",
         "pokemon": "Victini",
         "caminhos":[
             { "nome":"Templo Perdido" } 

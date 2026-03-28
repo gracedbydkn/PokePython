@@ -17,5 +17,7 @@ pokemons = importarPokemons()
 
 rowlet = pokemons["Rowlet"]
 
+
+
 print(totodile.tipo1, totodile.nome, totodile.hp)
 print(rowlet.tipo1, rowlet.tipo2, rowlet.atkmulti)

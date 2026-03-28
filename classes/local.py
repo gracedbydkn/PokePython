@@ -6,3 +6,9 @@ class Local:
         self.pokemon = pokemon
         self.caminhos = caminhos
         self.isCura = isCura
+
+    def curarEquipe(self, jogador) -> None:
+        if not self.isCura:
+            return
+        for p in jogador.equipe:
+            p.hp = p.hpmax

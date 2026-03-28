@@ -54,8 +54,7 @@ def barraHP(hp, hpMax, tamanho=20):
 
     return f"[{barra}] {hp}/{hpMax}"
 
-def exibirEstado(jogadorPokemon: Pokemon, inimigo: Pokemon):
-    
+def exibirEstado(jogadorPokemon: Pokemon, inimigo: Pokemon, nomeLocal: str = ""):
     largura = 124
  
     nomeJogador = f"                        {jogadorPokemon.nome}"
@@ -65,7 +64,7 @@ def exibirEstado(jogadorPokemon: Pokemon, inimigo: Pokemon):
 
     col = largura // 2
     print("\033[33m═\033[0m" * largura)
-    print(f"\033[36m{'★  BATALHA POKÉMON  ★':^{largura}}\033[0m")
+    print(f"\033[36m{'★  ' + nomeLocal.upper() + '  ★':^{largura}}\033[0m")
     print("\033[33m═\033[0m" * largura)
     print()
     print(f"\033[32m{nomeJogador:<{col}}\033[91m{nomeInimigo}\033[0m")
@@ -121,27 +120,96 @@ def escolherMovimento(pokemon:Pokemon):
         print("  Escolha inválida.")
 
 
-def escolherTroca(jogador: Jogador) -> Pokemon:
-    disponiveis = [p for p in jogador.equipe if p.isVivo() and p != jogador.pokemonAtual()]
-    print("\nEscolha um companheiro:")
-    for i, p in enumerate(disponiveis):
-        print(f"[{i+1}] {p.nome}  HP: {p.hp}/{p.hpmax}")
+def escolherTroca(jogador: Jogador, inimigo: Pokemon, nomeLocal: str = "") -> Pokemon:
+    todos = jogador.equipe
+    disponiveis = [p for p in todos if p.isVivo() and p != jogador.pokemonAtual()]
+    
+    limparTela()
+    exibirEstado(jogador.pokemonAtual(), inimigo, nomeLocal)
+    print(f" Trocar por qual Pokémon?")
+    print("─" * 124)
 
-    while True:
+    idx = 1
+    for p in todos:
+        if p == jogador.equipe[0]:
+            continue
+        
+        LARGURA_TIPO = 22
+        if p.tipo2:
+            textoTipo = f"{p.tipo1.upper()} / {p.tipo2.upper()}"
+            tipo_str = f"[ {corTipo(p.tipo1)}{p.tipo1.upper()}{RESET} / {corTipo(p.tipo2)}{p.tipo2.upper()}{RESET} ]"
+        else:
+            textoTipo = f"{p.tipo1.upper()}"
+            tipo_str = f"[ {corTipo(p.tipo1)}{p.tipo1.upper()}{RESET} ]"
+
+        padding = " " * (LARGURA_TIPO - len(textoTipo) - 2)
+
+        if not p.isVivo():
+            print(f"\n  \033[31m[✗]{RESET} \033[31m{p.nome:<16}{RESET}  {tipo_str}{padding}  \033[31mHP:{RESET} {barraHP(0, p.hpmax, tamanho=15)}")
+            continue
+
+        print(f"\n  [\033[33m{idx}{RESET}] {RESET}{p.nome:<16}{RESET}  {tipo_str}{padding}  {RESET}HP:{RESET} {barraHP(p.hp, p.hpmax, tamanho=15)}")
+        idx += 1
+
+    print(f"\n  [\033[33m0\033[0m] Voltar\n")
+
+    while True: 
         escolha = input("> ").strip()
+        if escolha == "0":
+            return None
         if escolha.isdigit() and 1 <= int(escolha) <= len(disponiveis):
             return disponiveis[int(escolha) - 1]
         print("Escolha inválida")
+
+def forcarTroca(jogador: Jogador, inimigo: Pokemon, nomeLocal: str = "") -> bool:
+    todos = jogador.equipe
+    disponiveis = [p for p in todos if p.isVivo()]
+    if not disponiveis:
+        return False
+    
+    limparTela()
+    exibirEstado(jogador.equipe[0], inimigo, nomeLocal)
+
+    print("  Seu pokémon foi derrotado!")
+    print("─" * 124)
+    print("  Escolha seu próximo pokémon:")
+
+    idx = 1
+    for p in todos:
+        LARGURA_TIPO = 22
+        if p.tipo2:
+            textoTipo = f"{p.tipo1.upper()} / {p.tipo2.upper()}"
+            tipo_str = f"[ {corTipo(p.tipo1)}{p.tipo1.upper()}{RESET} / {corTipo(p.tipo2)}{p.tipo2.upper()}{RESET} ]"
+        else:
+            textoTipo = f"{p.tipo1.upper()}"
+            tipo_str = f"[ {corTipo(p.tipo1)}{p.tipo1.upper()}{RESET} ]"
+
+        padding = " " * (LARGURA_TIPO - len(textoTipo) - 2)
+
+        if not p.isVivo():
+            print(f"\n  \033[31m[✗]{RESET} \033[31m{p.nome:<16}{RESET}  {tipo_str}{padding}  \033[31mHP:{RESET} {barraHP(0, p.hpmax, tamanho=15)}")
+            continue
+
+        print(f"\n  [\033[33m{idx}{RESET}] {RESET}{p.nome:<16}{RESET}  {tipo_str}{padding}  {RESET}HP:{RESET} {barraHP(p.hp, p.hpmax, tamanho=15)}")
+        idx += 1
+
+    print()
+    while True:
+        escolha = input(" > ").strip()
+        if escolha.isdigit() and 1 <= int(escolha) <= len(disponiveis):
+            jogador.trocarPokemon(disponiveis[int(escolha) - 1])
+            return True
+        print(" Escolha inválida.")
 
 def exibirLog(atacante: str, movimentoNome: str, resultado: dict):
     print(f"\n{atacante} utilizou {movimentoNome}!")
     
     if resultado["multiplicador"] == 0:
-        print("🚫 O alvo é imune!")
+        print(f"\033[91m  ⛒ ⛒ {RESET} O alvo é imune!\033[91m ⛒ ⛒  {RESET}")
     elif resultado["multiplicador"] < 1:
-        print("❌ Não é muito efetivo...")
+        print(f"\033[31m ✗✗ {RESET} Não é muito efetivo...\033[31m ✗✗ {RESET}")
     elif resultado["multiplicador"] > 1:
-        print("⭐ É super efetivo!")
+        print(f"\033[33m ★★ {RESET} É super efetivo!\033[33m ★★ {RESET}")
 
     if resultado["dano"] > 0:
         print(f"Causou {resultado['dano']} de dano.")
@@ -167,17 +235,19 @@ def telaDerrota():
     input("> ")
     exit()
 
-def iniciarBatalha(jogador: Jogador, inimigo: Pokemon):
+def iniciarBatalha(jogador: Jogador, inimigo: Pokemon, nomeLocal: str = ""):
     while True:
         limparTela()
-        exibirEstado(jogador.pokemonAtual(), inimigo)
+        exibirEstado(jogador.pokemonAtual(), inimigo, nomeLocal)
         
         acao = escolherAcao(jogador)
 
         if acao == "trocar":
-            novo = escolherTroca(jogador)
+            novo = escolherTroca(jogador, inimigo, nomeLocal)
+            if novo is None:
+                continue
             jogador.trocarPokemon(novo)
-            print(f"Vai, {novo.nome}!")
+            print(f"\nVai, {novo.nome}!")
             turnoInimigo(inimigo, jogador.pokemonAtual())
         else:
             movimento = escolherMovimento(jogador.pokemonAtual())
@@ -188,15 +258,25 @@ def iniciarBatalha(jogador: Jogador, inimigo: Pokemon):
             exibirLog(jogador.pokemonAtual().nome, movimento.nome, resultado)
             if not inimigo.isVivo():
                 limparTela()
-                exibirEstado(jogador.pokemonAtual(), inimigo)
+                exibirEstado(jogador.pokemonAtual(), inimigo, nomeLocal)
                 telaVitoria(inimigo, jogador)
                 return "vitoria"
         
             turnoInimigo(inimigo, jogador.pokemonAtual())
 
+        if not jogador.equipe[0].isVivo():
+            if not jogador.isVivo():
+                limparTela()
+                exibirEstado(jogador.equipe[0], inimigo, nomeLocal)
+                telaDerrota()
+                return "derrota"
+            forcarTroca(jogador, inimigo, nomeLocal)
+            continue
+
+
         if not jogador.isVivo():
             limparTela()
-            exibirEstado(jogador.pokemonAtual(), inimigo)
+            exibirEstado(jogador.pokemonAtual(), inimigo, nomeLocal)
             telaDerrota()
             return "derrota"
 
