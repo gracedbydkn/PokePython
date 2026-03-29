@@ -4,7 +4,7 @@ import re
 from itertools import zip_longest
 import time
 
-# ── Cores ANSI (mesmo padrão do projeto) ─────────────────────────────────────
+# ── Cores ANSI ─────────────────────────────────────
 RESET = "\033[0m"
 V     = "\033[92m"
 R     = "\033[31m"
@@ -18,6 +18,7 @@ BL    = "\033[34m"
 RED   = "\033[31m"
 BLA   = "\033[30m"
 
+# ── Clear da Tela / Efeito de Escrita/ Formatação dos Elementos ─────────────────────────────────────
 def limparTela():
     os.system('cls' if os.name == 'nt' else 'clear')
     
@@ -101,8 +102,9 @@ def printMENU():
     print(LOGO)
     lado_a_lado(Charizard, Pikachu)
 
-LARGURA = 124
+LARGURA = 124 # Tamanho da Tela.
 
+# ── Criação das Telas ─────────────────────────────────────
 def exibirMenu():
     limparTela()
     printMENU()

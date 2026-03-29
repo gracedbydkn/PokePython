@@ -4,6 +4,7 @@ from itertools import zip_longest
 from classes.pokemon import Pokemon
 from classes.jogador import Jogador
 
+# ── Cores ANSI ─────────────────────────────────────
 RESET = "\033[0m"
 V  = "\033[92m"
 R  = "\033[31m"

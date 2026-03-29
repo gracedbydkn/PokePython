@@ -1,3 +1,4 @@
+# Tabela de matchups de todos os tipos de pokémon (atacante, defensor).
 TABELA = {
     ("normal", "pedra"): 0.5,
     ("normal", "fantasma"): 0,
