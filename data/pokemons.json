@@ -214,19 +214,19 @@
       "nome": "Chimchar",
       "tipo1": "fogo",
       "tipo2": null,
-      "hp": 0,
-      "hpmax": 0,
+      "hp": 30,
+      "hpmax": 30,
       "movimentos": [
         {
           "nome": "Brasa",
           "tipo": "fogo",
-          "dano": 1,
+          "dano": 10,
           "efeito": null
         },
         {
           "nome": "Arranhão",
           "tipo": "normal",
-          "dano": 1,
+          "dano": 10,
           "efeito": null
         },
         {
@@ -311,7 +311,7 @@
         {
           "nome": "Ataque flamejante",
           "tipo": "fogo",
-          "dano": 1,
+          "dano": 10,
           "efeito": null
         },
         {
@@ -380,7 +380,7 @@
         {
           "nome": "Fúria violenta",
           "tipo": "fogo",
-          "dano": 1,
+          "dano": 10,
           "efeito": null
         },
         {
@@ -886,8 +886,8 @@
       "nome": "Mawile",
       "tipo1": "aço",
       "tipo2": "fada",
-      "hp": 0,
-      "hpmax": 0,
+      "hp": 30,
+      "hpmax": 30,
       "movimentos": [
         {
           "nome": "Cabeçada de ferro",
@@ -906,7 +906,7 @@
           "tipo": "sombrio",
           "dano": 0,
           "efeito": {
-            "alvo": "proprio",
+            "alvo": "inimigo",
             "atributo": "defmulti",
             "valor": 0.5
           }
@@ -1368,8 +1368,8 @@
       "nome": "Staraptor",
       "tipo1": "normal",
       "tipo2": "voador",
-      "hp": 0,
-      "hpmax": 0,
+      "hp": 30,
+      "hpmax": 30,
       "movimentos": [
         {
           "nome": "Rosnado",
@@ -1795,8 +1795,8 @@
       "nome": "Sableye",
       "tipo1": "sombrio",
       "tipo2": "fantasma",
-      "hp": 0,
-      "hpmax": 0,
+      "hp": 30,
+      "hpmax": 30,
       "movimentos": [
         {
           "nome": "Esfera das sombras",
@@ -2210,8 +2210,8 @@
       "nome": "Victini",
       "tipo1": "psiquico",
       "tipo2": "fogo",
-      "hp": 0,
-      "hpmax": 0,
+      "hp": 30,
+      "hpmax": 30,
       "movimentos": [
         {
           "nome": "V-criar",

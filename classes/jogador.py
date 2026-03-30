@@ -6,6 +6,8 @@ class Jogador:
     def __init__(self, equipe: list[Pokemon], localAtual: Local):
         self.equipe = equipe
         self.localAtual = localAtual
+        self.batalhas = 0            # Contador de batalhas.
+        self.inicial = equipe[0]     # Armazena o Pokémon inicial.
 
     # Move o jogador para um local destino; retorna False se o destino não for um caminho válido.
     def mover(self, destino: Local) -> bool:
@@ -20,7 +22,8 @@ class Jogador:
 
     # Retorna o primeiro Pokémon vivo da equipe (considerado o Pokémon atual).
     def pokemonAtual(self) -> Pokemon:
-        return next(p for p in self.equipe if p.isVivo())
+        vivos = [p for p in self.equipe if p.isVivo()]
+        return vivos[0]
     
     # Move o Pokémon escolhido para o primeiro da equipe, tornando o ativo.
     def trocarPokemon(self, novo: Pokemon) -> bool:

@@ -48,7 +48,8 @@ def importarLocais(caminho: str = "data/locais.json", pokemons: dict[str, Pokemo
                 nome = d["nome"],
                 caminhos = [],        
                 pokemon = pokemon,
-                isCura = d.get("isCura", False)
+                isCura = d.get("isCura", False),
+                titulo = d.get("titulo", [])
             )
         
         # Segunda passagem: vincula os caminhos entre locais já criados.

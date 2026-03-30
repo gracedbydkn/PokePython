@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import re
 from itertools import zip_longest
@@ -18,15 +19,40 @@ BL    = "\033[34m"
 RED   = "\033[31m"
 BLA   = "\033[30m"
 
+
+# Funções para centralizar e formatar o texto
+def visibleLen(s: str) -> int:
+    return len(re.sub(r'\033\[[0-9;]*m', '', s))
+
+def padCenter(s: str, width: int) -> str:
+    pad = width - visibleLen(s)
+    left = pad // 2
+    right = pad - left
+    return ' ' * left + s + ' ' * right
+
+def padLeft(s: str, width: int) -> str:
+    pad = width - visibleLen(s)
+    return s + ' ' * max(0, pad)
+
 # ── Clear da Tela / Efeito de Escrita/ Formatação dos Elementos ─────────────────────────────────────
 def limparTela():
     os.system('cls' if os.name == 'nt' else 'clear')
     
 def digitar(texto, delay=0.03):
-    for ch in texto:
+    stripped = texto.strip(' ')
+    espacoEsquerda = len(texto) - len(texto.lstrip(' '))
+    espacoDireita = len(texto) - len(texto.rstrip(' '))
+
+    sys.stdout.write(' ' * espacoEsquerda)
+    sys.stdout.flush()
+
+    for ch in stripped:
         sys.stdout.write(ch)
         sys.stdout.flush()
         time.sleep(delay)
+
+    sys.stdout.write(' ' * espacoDireita)
+    sys.stdout.flush()
     print()
 
 def strip_ansi(s):
@@ -102,7 +128,7 @@ def printMENU():
     print(LOGO)
     lado_a_lado(Charizard, Pikachu)
 
-LARGURA = 124 # Tamanho da Tela.
+LARGURA = 230 # Tamanho da Tela.
 
 # ── Criação das Telas ─────────────────────────────────────
 def exibirMenu():
@@ -121,15 +147,16 @@ def exibirMenu():
 def escolherInicial(pokemons):
     limparTela()
     print(LOGO)
+    print("\033[33m═\033[0m" * LARGURA)
     print()
 
-    digitar(f"  {Y}Você sente uma sensação antiga...{RESET}", delay=0.04)
+    digitar(padCenter(f"  {Y}Você sente uma sensação antiga...{RESET}", LARGURA), delay=0.04)
     time.sleep(0.6)
-    digitar(f"  {Y}Algo está te chamando, de muito longe...{RESET}", delay=0.04)
+    digitar(padCenter(f"  {Y}Algo está te chamando, de muito longe...{RESET}", LARGURA), delay=0.04)
     time.sleep(0.8)
-    digitar(f"  {Y}Porém, você...{RESET}", delay=0.05)
+    digitar(padCenter(f"  {Y}Porém, você...{RESET}", LARGURA), delay=0.05)
     time.sleep(1.2)
-    digitar(f"  {Y}Quem é você?{RESET}", delay=0.07)
+    digitar(padCenter(f"  {Y}Quem é você?{RESET}", LARGURA), delay=0.07)
     time.sleep(1.0)
 
     print()
@@ -144,23 +171,24 @@ def escolherInicial(pokemons):
 
     for prefixo, frase, _, _ in opcoes:
         time.sleep(0.3)
-        digitar(f"{prefixo} {frase}", delay=0.025)
+        digitar(padCenter(f"{prefixo} {frase}", LARGURA), delay=0.025)
 
     print()
     print(f"\033[33m─\033[0m" * LARGURA)
 
     while True:
-        escolha = input(f"\n  {Y}>{RESET} ").strip()
+        escolha = padCenter(input(f" {Y}>{RESET} "), LARGURA).strip()
 
         if escolha in ("1", "2", "3"):
             _, frase, nome, nomeColorido = opcoes[int(escolha) - 1]
             print()
             time.sleep(0.5)
-            digitar(f"  {Y}...{RESET}", delay=0.1)
+            digitar(padCenter(f"  {Y}*Crack*...     *Crack*...{RESET}", LARGURA), delay=0.1)
             time.sleep(0.8)
-            digitar(f"  {Y}Você é um {nomeColorido}{Y}!{RESET}", delay=0.06)
+            digitar(padCenter(f"  {Y}...Você nasceu como um {nomeColorido}{Y}!{RESET}", LARGURA), delay=0.06)
             time.sleep(1.0)
             print()
-            input(f"  {Y}Pressione Enter para começar sua jornada...{RESET}")
+            input(padCenter(f"  {Y}Pressione Enter para começar sua jornada...{RESET}", LARGURA))
             return pokemons[nome]
-        print(f"  Escolha inválida.")
+        
+        print(padCenter(f"  Escolha inválida.", LARGURA))
