@@ -6,6 +6,7 @@ from classes.pokemon import Pokemon
 from classes.jogador import Jogador
 from data.batalhasCounter import EVOLUCOES, DIALOGOS_VITORIA
 from data.loader import importarPokemons
+from menu import digitar
 import time
 
 # ── Cores ANSI ──
@@ -99,7 +100,6 @@ def exibirEstado(jogadorPokemon: Pokemon, inimigo: Pokemon, local = None):
     print(padCenter(hpJogadorStr, col) + padCenter(hpInimigoStr, col))
 
     print()
-    print("\033[33m─\033[0m" * largura)
     
     linhasJogador = jogadorPokemon.ascii if jogadorPokemon.ascii else []
     linhasInimigo = inimigo.ascii if inimigo.ascii else []
@@ -119,7 +119,7 @@ def escolherAcao(jogador:Jogador)-> str:
 
     titulo = f"O que {jogador.pokemonAtual().nome} vai fazer?"
     print(f"\n{padCenter(titulo, largura)}\n")
-    print("─" * largura)
+    print("\033[33m─\033[0m" * largura)
 
     opcao1 = f"[\033[33m1\033[0m] Atacar"
     opcao2 = f"[\033[33m2\033[0m] Trocar" if temOutroVivo else f"[2] Trocar (indisponível)"
@@ -127,7 +127,7 @@ def escolherAcao(jogador:Jogador)-> str:
     print(f"\n{opcoes}")
 
     while True:
-        escolha = input(f"\n{"":^90}> ").strip()
+        escolha = input(f"\n\033[33m>\033[0m ").strip()
         if escolha == "1":
             return"atacar"
         if escolha == "2" and temOutroVivo:
@@ -141,7 +141,7 @@ def corTipo(tipo: str) -> str:
 def escolherMovimento(pokemon:Pokemon):
     titulo = f"Qual ataque \033[33m{pokemon.nome}\033[0m vai utilizar?"
     print(f"\n{padCenter(titulo, largura)}\n")
-    print("─" * largura)    
+    print("\033[33m─\033[0m" * largura)
 
     for i, mov in enumerate(pokemon.movimentos):
         cor = corTipo(mov.tipo)
@@ -174,7 +174,7 @@ def escolherTroca(jogador: Jogador, inimigo: Pokemon, local = None) -> Pokemon:
 
     idx = 1
     for p in todos:
-        if p == jogador.equipe[0]:
+        if p == jogador.pokemonAtual():
             continue
         
         LARGURA_TIPO = 22
@@ -217,7 +217,7 @@ def forcarTroca(jogador: Jogador, inimigo: Pokemon, local = None) -> bool:
     exibirEstado(jogador.equipe[0], inimigo, local)
     desmaio = "Seu pokémon foi derrotado!"
     print(padCenter(desmaio, largura))
-    print(f"\033[33m─\033[0m]" * largura)
+    print(f"\033[33m─\033[0m" * largura)
     escolha = "Escolha seu próximo pokémon"
     print(padCenter(escolha, largura))
 
@@ -244,7 +244,7 @@ def forcarTroca(jogador: Jogador, inimigo: Pokemon, local = None) -> bool:
 
     print()
     while True:
-        escolha = padCenter(input(" > ").strip(), largura)
+        escolha = input(padCenter("> ", largura)).strip()
         if escolha.isdigit() and 1 <= int(escolha) <= len(disponiveis):
             jogador.trocarPokemon(disponiveis[int(escolha) - 1])
             return True
@@ -256,26 +256,30 @@ def exibirLog(atacante: str, movimentoNome: str, resultado: dict):
     print(padCenter(log, largura))
     
     if resultado["multiplicador"] == 0:
-        multi = f"\033[91m  ⛒ ⛒ {RESET} O alvo é imune!\033[91m ⛒ ⛒  {RESET}\n"
-        print(padCenter(multi, largura))
-    elif resultado["multiplicador"] < 1:
-        multi = f"\033[31m ✗✗ {RESET} Não é muito efetivo...\033[31m ✗✗ {RESET}"
-        print(padCenter(multi, largura))
-    elif resultado["multiplicador"] > 1:
-        multi = f"\033[33m ★★ {RESET} É super efetivo!\033[33m ★★ {RESET}"
-        print(padCenter(multi, largura))
-
-    if resultado["dano"] > 0:
+            multi = f"🚫🚫 O alvo é imune! 🚫🚫\n"
+            print(padCenter(multi, largura))
+    elif resultado["dano"] > 0:
+        if resultado["multiplicador"] < 1:
+            multi = f"❌❌ Não é muito efetivo... ❌❌"
+            print(padCenter(multi, largura))
+        elif resultado["multiplicador"] > 1:
+            multi = f"⭐⭐ É super efetivo! ⭐⭐"
+            print(padCenter(multi, largura))
         dano = f"Causou {resultado['dano']} de dano.\n"
         print(padCenter(dano, largura))
 
     if resultado["logEfeito"]:
         print(padCenter(resultado["logEfeito"], largura))
     
+def calcularScaling(batalhas: int) -> tuple[float, float, float]:
+    multHP = 1.0 + (batalhas * 0.25)
+    multATK = 1.0 + (batalhas * 0.08)
+    multHPAliado = 1.0 + (batalhas * 0.1)
+    return multHP, multATK, multHPAliado
 
-def turnoInimigo(inimigo: Pokemon, alvo: Pokemon):
+def turnoInimigo(inimigo: Pokemon, alvo: Pokemon, multATK: float=1.0):
     movimento = random.choice(inimigo.movimentos)
-    resultado= inimigo.atacar(movimento, alvo)
+    resultado= inimigo.atacar(movimento, alvo, multBatalha=multATK)
     exibirLog(inimigo.nome, movimento.nome, resultado)
     
 def verificarEvolucao(jogador: Jogador, pokemons: dict):
@@ -309,28 +313,41 @@ def telaVitoria(inimigo: Pokemon, jogador: Jogador, pokemons: dict):
     dialogo = DIALOGOS_VITORIA.get(jogador.batalhas, [])
     print()
     for linha in dialogo:
-        dialogo = f"  {inimigo.nome}: \"{linha}\""
+        dialogo = f"  \033[33m{inimigo.nome}:\033[0m \"{linha}\""
         print(padCenter(dialogo, largura))
     
     jogador.batalhas += 1
     jogador.recrutar(inimigo)
-    recrutar = f"{inimigo.nome} se juntou à sua equipe!\n"
+    recrutar = f"\033[32m{inimigo.nome}\033[0m se juntou à sua equipe!\n"
     print(padCenter(recrutar, largura))
 
     verificarEvolucao(jogador, pokemons)
     confirmar = f"\033[33mPressione Enter para continuar...\033[0m"
-    input(padCenter(confirmar, largura))
+    input(padCenter(confirmar, largura)).strip()
 
 def telaDerrota():
-    derrota = "\nVocê foi derrotado..."
-    print(padCenter(derrota, largura))
-    sair = "[1] Sair"
-    print(padCenter(sair,largura))
-    print(" > ")
+    print(  )
+    derrota = "\033[31mVocê foi derrotado...\033[0m"
+    digitar(padCenter(derrota, largura), delay=0.2)
+
+    print()
+    sair = "\033[33mPressione Enter para sair...\033[0m"
+    input(padCenter(sair, largura)).strip()
     exit()
 
 def iniciarBatalha(jogador: Jogador, inimigo: Pokemon, local=None, pokemons: dict = {}):
-    while True:
+    multHP, multATK, multHPAliado = calcularScaling(jogador.batalhas)
+    inimigo.hpmax = int(inimigo.hpmax * multHP)
+    inimigo.hp = inimigo.hpmax
+
+    for p in jogador.equipe:
+        hpmaxAnterior = p.hpmax
+        p.hpmax = int(p.hpbase * multHPAliado)
+        diferenca = p.hpmax - hpmaxAnterior
+        if p.isVivo():
+            p.hp = min(p.hpmax, p.hp + diferenca)
+
+    while True: 
         limparTela()
         exibirEstado(jogador.pokemonAtual(), inimigo, local)
         
@@ -343,7 +360,7 @@ def iniciarBatalha(jogador: Jogador, inimigo: Pokemon, local=None, pokemons: dic
             jogador.trocarPokemon(novo)
             novopokemon = f"Vai, {novo.nome}!\n"
             print(padCenter(novopokemon, largura))
-            turnoInimigo(inimigo, jogador.pokemonAtual())
+            turnoInimigo(inimigo, jogador.pokemonAtual(), multATK)
         else:
             movimento = escolherMovimento(jogador.pokemonAtual())
             if movimento is None:
@@ -354,10 +371,12 @@ def iniciarBatalha(jogador: Jogador, inimigo: Pokemon, local=None, pokemons: dic
             if not inimigo.isVivo():
                 limparTela()
                 exibirEstado(jogador.pokemonAtual(), inimigo, local)
+                for p in jogador.equipe:
+                    p.resetarMultis()
                 telaVitoria(inimigo, jogador, pokemons)
                 return "vitoria"
         
-            turnoInimigo(inimigo, jogador.pokemonAtual())
+            turnoInimigo(inimigo, jogador.pokemonAtual(), multATK)
 
         if not jogador.equipe[0].isVivo():
             if not jogador.isVivo():
@@ -366,14 +385,17 @@ def iniciarBatalha(jogador: Jogador, inimigo: Pokemon, local=None, pokemons: dic
                 telaDerrota()
                 return "derrota"
             forcarTroca(jogador, inimigo, local)
+            input()
             continue
 
 
         if not jogador.isVivo():
             limparTela()
             exibirEstado(jogador.pokemonAtual(), inimigo, local)
+            for p in jogador.equipe:
+                p.resetarMultis()
             telaDerrota()
             return "derrota"
 
         confirmar = "Pressione Enter para continuar..."
-        input(padCenter(confirmar, largura))
+        input(padCenter(confirmar, largura)).strip()

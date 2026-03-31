@@ -72,13 +72,13 @@ def lado_a_lado(lista_esq, lista_dir, espaco=6):
     
 # ── Arte ASCII ────────────────────────────────────────────────────────────────
 LOGO = (
-    f"\n{Y}"
-    f"{'':>16}██████╗  ██████╗ ██╗  ██╗███████╗    ██████╗ ██╗   ██╗████████╗██╗  ██╗ ██████╗ ███╗   ██╗\n"
-    f"{'':>16}██╔══██╗██╔═══██╗██║ ██╔╝██╔════╝    ██╔══██╗╚██╗ ██╔╝╚══██╔══╝██║  ██║██╔═══██╗████╗  ██║\n"
-    f"{'':>16}██████╔╝██║   ██║█████╔╝ █████╗      ██████╔╝ ╚████╔╝    ██║   ███████║██║   ██║██╔██╗ ██║\n"
-    f"{'':>16}██╔═══╝ ██║   ██║██╔═██╗ ██╔══╝      ██╔═══╝   ╚██╔╝     ██║   ██╔══██║██║   ██║██║╚██╗██║\n"
-    f"{'':>16}██║     ╚██████╔╝██║  ██╗███████╗    ██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║\n"
-    f"{'':>16}╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝{RESET}\n"
+    f"{Y}",
+    f"{''}██████╗  ██████╗ ██╗  ██╗███████╗    ██████╗ ██╗   ██╗████████╗██╗  ██╗ ██████╗ ███╗   ██╗",
+    f"{''}██╔══██╗██╔═══██╗██║ ██╔╝██╔════╝    ██╔══██╗╚██╗ ██╔╝╚══██╔══╝██║  ██║██╔═══██╗████╗  ██║",
+    f"{''}██████╔╝██║   ██║█████╔╝ █████╗      ██████╔╝ ╚████╔╝    ██║   ███████║██║   ██║██╔██╗ ██║",
+    f"{''}██╔═══╝ ██║   ██║██╔═██╗ ██╔══╝      ██╔═══╝   ╚██╔╝     ██║   ██╔══██║██║   ██║██║╚██╗██║",
+    f"{''}██║     ╚██████╔╝██║  ██╗███████╗    ██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║",
+    f"{''}╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝{RESET}"
 )
 
 Charizard = [
@@ -124,43 +124,59 @@ Pikachu = [
     Y+"⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"+RESET,
     ]
 
-def printMENU():
-    print(LOGO)
-    lado_a_lado(Charizard, Pikachu)
+largura = 230 # Tamanho da Tela.
 
-LARGURA = 230 # Tamanho da Tela.
+def exibirCentralizado(art: list):
+    for linha in art: 
+        print(padCenter(linha, largura))
+
+def exibirLadoaLadoCentralizado(esquerda: list, direita: list, espaco: int = 6):
+    larguraEsquerda = max(visible_len(l) for l in esquerda)
+    larguraTotal = larguraEsquerda + espaco + max(visible_len(l) for l in direita)
+    offset = ' ' * max(0, (largura - larguraTotal) // 2)
+
+    for le, ld in zip_longest(esquerda, direita, fillvalue=''):
+        print(offset + pad_to(le + RESET, larguraEsquerda) + ' ' * espaco + ld)
+
+def printMENU():
+    print(f"\033[33m═\033[0m" * largura)
+    exibirCentralizado(LOGO)
+    exibirLadoaLadoCentralizado(Charizard, Pikachu)
+    
+
 
 # ── Criação das Telas ─────────────────────────────────────
 def exibirMenu():
     limparTela()
     printMENU()
     print()
-    print(f"\033[33m═\033[0m" * LARGURA)
-    print(f"\033[33m{'★  MENU PRINCIPAL  ★':^{LARGURA}}\033[0m")
-    print(f"\033[33m═\033[0m" * LARGURA)
+    print(f"\033[33m═\033[0m" * largura)
+    print(f"\033[33m{'★  MENU PRINCIPAL  ★':^{largura}}\033[0m")
+    print(f"\033[33m═\033[0m" * largura)
     print()
-    print(f"  [\033[33m1\033[0m] \033[92mIniciar Jogo\033[0m")
-    print(f"  [\033[33m2\033[0m] \033[31mFechar\033[0m")
+    opcao = f"  [\033[33m1\033[0m] \033[92mIniciar Jogo\033[0m    [\033[33m2\033[0m] \033[31mFechar\033[0m    "
+    print(padCenter(opcao, largura))
     print()
-    print("─" * LARGURA)
+    print(f"\033[33m─\033[0m" * largura)
 
 def escolherInicial(pokemons):
     limparTela()
-    print(LOGO)
-    print("\033[33m═\033[0m" * LARGURA)
+    print(f"\033[33m═\033[0m" * largura)
+    exibirCentralizado(LOGO)
+    print("\033[33m═\033[0m" * largura)
     print()
 
-    digitar(padCenter(f"  {Y}Você sente uma sensação antiga...{RESET}", LARGURA), delay=0.04)
+    digitar(padCenter(f"{Y}Você sente uma sensação antiga...{RESET}", largura), delay=0.04)
     time.sleep(0.6)
-    digitar(padCenter(f"  {Y}Algo está te chamando, de muito longe...{RESET}", LARGURA), delay=0.04)
+    digitar(padCenter(f"{Y}Algo está te chamando, de muito longe...{RESET}", largura), delay=0.04)
     time.sleep(0.8)
-    digitar(padCenter(f"  {Y}Porém, você...{RESET}", LARGURA), delay=0.05)
+    digitar(padCenter(f"{Y}Porém, você...{RESET}", largura), delay=0.05)
     time.sleep(1.2)
-    digitar(padCenter(f"  {Y}Quem é você?{RESET}", LARGURA), delay=0.07)
+    digitar(padCenter(f"{Y}Quem é você?{RESET}", largura), delay=0.07)
     time.sleep(1.0)
 
     print()
-    print(f"\033[33m─\033[0m" * LARGURA)
+    print(f"\033[33m─\033[0m" * largura)
     print()
 
     opcoes = [
@@ -171,24 +187,24 @@ def escolherInicial(pokemons):
 
     for prefixo, frase, _, _ in opcoes:
         time.sleep(0.3)
-        digitar(padCenter(f"{prefixo} {frase}", LARGURA), delay=0.025)
+        digitar(padCenter(f"{prefixo} {frase}", largura), delay=0.025)
 
     print()
-    print(f"\033[33m─\033[0m" * LARGURA)
+    print(f"\033[33m─\033[0m" * largura)
 
     while True:
-        escolha = padCenter(input(f" {Y}>{RESET} "), LARGURA).strip()
+        escolha = padCenter(input(f" {Y}>{RESET} "), largura).strip()
 
         if escolha in ("1", "2", "3"):
             _, frase, nome, nomeColorido = opcoes[int(escolha) - 1]
             print()
             time.sleep(0.5)
-            digitar(padCenter(f"  {Y}*Crack*...     *Crack*...{RESET}", LARGURA), delay=0.1)
+            digitar(padCenter(f"  {Y}*Crack*...     *Crack*...{RESET}", largura), delay=0.1)
             time.sleep(0.8)
-            digitar(padCenter(f"  {Y}...Você nasceu como um {nomeColorido}{Y}!{RESET}", LARGURA), delay=0.06)
+            digitar(padCenter(f"  {Y}...Você nasceu como um {nomeColorido}{Y}!{RESET}", largura), delay=0.06)
             time.sleep(1.0)
             print()
-            input(padCenter(f"  {Y}Pressione Enter para começar sua jornada...{RESET}", LARGURA))
+            input(padCenter(f"  {Y}Pressione Enter para começar sua jornada...{RESET}", largura))
             return pokemons[nome]
         
-        print(padCenter(f"  Escolha inválida.", LARGURA))
+        print(padCenter(f"  Escolha inválida.", largura))

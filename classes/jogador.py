@@ -31,7 +31,7 @@ class Jogador:
             return False
         if not novo.isVivo():       # Não pode trocar para um Pokémon desmaiado.
             return False
-        if novo == self.pokemonAtual(): # Já é o Pokémon atual.
+        if novo == self.equipe[0]: # Já é o Pokémon atual.
             return False
         self.equipe.remove(novo)
         self.equipe.insert(0, novo)
@@ -40,5 +40,6 @@ class Jogador:
     # Adiciona um Pokémon recrutado à equipe com HP totalmente restaurado.
     def recrutar(self, pokemon: Pokemon) -> bool:
         pokemon.hp = pokemon.hpmax
+        pokemon.resetarMultis()
         self.equipe.append(pokemon)
         return True

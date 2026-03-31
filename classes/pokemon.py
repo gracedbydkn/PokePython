@@ -9,18 +9,19 @@ class Pokemon:
         self.tipo2 = tipo2
         self.hp = hp
         self.hpmax = hpmax
+        self.hpbase = hp
         self.movimentos = movimentos
         self.atkmulti = atkmulti if atkmulti is not None else 1
         self.defmulti = defmulti if defmulti is not None else 1
         self.ascii = ascii
 
     # Executa um ataque contra o alvo e retorna dano causado, efetividade e efeito aplicado.
-    def atacar(self, movimento, alvo: "Pokemon") -> dict:
+    def atacar(self, movimento, alvo: "Pokemon", multBatalha: float = 1.0) -> dict:
         efetividade = get_multiplicador(movimento.tipo, alvo.tipo1, alvo.tipo2)
         if efetividade == 0:
             return {"dano": 0, "multiplicador": 0, "logEfeito": None}
 
-        dano = alvo.receberDano(int(movimento.dano * efetividade * self.atkmulti)) 
+        dano = alvo.receberDano(int(movimento.dano * efetividade * self.atkmulti * multBatalha)) 
         logEfeito = self.aplicarEfeito(movimento, alvo)
 
         return {"dano": dano, "multiplicador": efetividade, "logEfeito": logEfeito}
@@ -41,11 +42,15 @@ class Pokemon:
             atributoLog = "A defesa"
 
         direcao = "subiu" if efeito["valor"] > 1 else "caiu"
+        log = f"{atributoLog} de {alvo.nome} {direcao}!"
 
-        return f"{atributoLog} de {alvo.nome} {direcao}"
+        log += "\n"
+        return log 
     
     # Desconta o dano recebido do HP, aplicando o multiplicador de defesa.
     def receberDano(self, dano: int) -> int:
+        if dano == 0:
+            return 0
         danoFinal = max(1, int((dano / self.defmulti)))
         self.hp = max(0, self.hp - danoFinal)
         return danoFinal
@@ -61,3 +66,7 @@ class Pokemon:
     # Verifica se o Pokémon ainda está vivo.
     def isVivo(self) -> bool:
         return self.hp > 0
+    
+    def resetarMultis(self):
+        self.atkmulti = 1.0
+        self.defmulti = 1.0

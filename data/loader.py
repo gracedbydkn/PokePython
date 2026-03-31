@@ -1,4 +1,5 @@
 import json
+import random
 from classes.pokemon import Pokemon
 from classes.moves import Moves
 from classes.local import Local
@@ -34,16 +35,19 @@ def importarPokemons(caminho: str = "data/pokemons.json") -> dict[str, Pokemon]:
 def importarLocais(caminho: str = "data/locais.json", pokemons: dict[str, Pokemon] = None) -> dict[str, Local]:
     with open(caminho, "r", encoding="utf-8") as f:
         dados = json.load(f)
-        print(type(dados))
-        print(type(dados["locais"]))
-        print(dados["locais"][0])
 
         locais = {}
         # Primeira passagem: cria todos os locais sem caminhos ainda.
         for d in dados["locais"]:
-            nomePokemon = d["pokemon"].strip() if isinstance(d["pokemon"], str) else None
-            pokemon = pokemons.get(nomePokemon) if (pokemons and nomePokemon) else None
-
+            pokemonRaw = d.get("pokemon")
+            if isinstance(pokemonRaw, list):
+                nomes = [p["nome"].strip() for p in pokemonRaw]
+                pokemon = pokemons.get(random.choice(nomes)) if pokemons else None
+            elif isinstance(pokemonRaw, str):
+                pokemon = pokemons.get(pokemonRaw.strip()) if pokemons else None
+            else:
+                pokemon = None
+                
             locais[d["nome"]] = Local(
                 nome = d["nome"],
                 caminhos = [],        
